@@ -1,0 +1,14 @@
+{
+  "name": "giovanna-ribeiro-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs",
+    "check": "node --check script.js && node --check server.mjs",
+    "design:check": ".agents\\skills\\impeccable\\scripts\\impeccable.cmd detect index.html style.css script.js",
+    "design:hooks": ".agents\\skills\\impeccable\\scripts\\impeccable.cmd hooks status",
+    "design:hooks:on": ".agents\\skills\\impeccable\\scripts\\impeccable.cmd hooks on",
+    "check:all": "npm run check && npm run design:check"
+  }
+}
