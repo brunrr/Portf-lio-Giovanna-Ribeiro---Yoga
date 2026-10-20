@@ -6,6 +6,16 @@ Execute `npm run dev` e abra http://127.0.0.1:4173. Verificação de sintaxe: `n
 
 Arquivos: `index.html` (conteúdo), `style.css` (tokens e responsividade), `script.js` (interações) e `assets/` (arquivos locais). Fontes e pendências editoriais estão em `docs/referencias.md`.
 
+## Publicação pelo GitHub e Vercel
+
+Envie a raiz deste projeto ao repositório, incluindo **toda a pasta `assets/`**, `scripts/build.mjs`, `package.json` e `vercel.json`. Não envie apenas o HTML: fotos e fontes são arquivos separados.
+
+Na Vercel, importe o repositório e use a raiz do projeto como Root Directory. A configuração versionada define Framework Preset Other, Build Command `npm run build` e Output Directory `dist`. O build não exige pacotes externos e verifica arquivos ausentes, vazios e diferenças de maiúsculas/minúsculas antes de copiar os arquivos públicos para `dist/`. O servidor Node de prévia não é usado em produção.
+
+As fotos e fontes ficam no próprio domínio em `/assets/`, sem URLs temporárias de Canva ou caminhos do computador. Backups, ferramentas locais e capturas de auditoria não entram no deploy. Após publicar, verifique `/assets/photo-2.png` e `/assets/hero-joy-portrait.png` no domínio final.
+
+O diretório `dist/` é gerado no build e não precisa ser enviado ao GitHub. As ferramentas Impeccable são locais e podem ser reinstaladas pelos colaboradores; não são dependências da publicação.
+
 ## Varredura de design — Impeccable
 
 Skill 4.7.0 e detector 0.1.16 instalados localmente em `.agents/skills/impeccable/`. O detector é um executável independente; não requer dependências npm. Os atalhos abaixo usam o launcher Windows deste projeto.

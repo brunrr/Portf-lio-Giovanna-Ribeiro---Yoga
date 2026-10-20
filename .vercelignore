@@ -1,0 +1,8 @@
+.agents
+.codex
+.gemini
+.impeccable
+versions
+docs
+*.log
+*.zip
